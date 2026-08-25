@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import threading
 import datetime
-from sixth import updateUI, startUI, root, setListening
+from ui import updateUI, startUI, root, setListening
 import pygame
 import os
 import tempfile
@@ -445,10 +445,6 @@ def isWakeWord(text):
     return any(w in text for w in wake_words)
 
 def voiceLoop():
-    import time
-    time.sleep(4)
-
-   
     greet()
 
     selectLanguage()
@@ -479,7 +475,12 @@ def voiceLoop():
                 say(L("no_command"))
 
 
-if __name__ == "__main__":
+def start_voice():
     t = threading.Thread(target=voiceLoop, daemon=True)
     t.start()
+
+
+if __name__ == "__main__":
+    root.after(100, start_voice)
     startUI()
+

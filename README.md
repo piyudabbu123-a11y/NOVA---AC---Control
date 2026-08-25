@@ -1,146 +1,66 @@
-\# NOVA - AC Control Assistant
-
-
+# NOVA - AC Control Assistant
 
 NOVA is a Python-based voice-controlled AC assistant that uses speech recognition and text-to-speech to understand voice commands and provide an interactive desktop interface for AC control.
 
+## Features
 
+- Voice command recognition
+- Text-to-speech responses (Neural TTS via Edge TTS)
+- English and Hindi voice support
+- Interactive desktop interface (Tkinter Canvas)
+- AC ON/OFF control
+- Temperature control and reset timer
+- Voice-based interaction with wake word detection
 
-\## Features
+## Technologies Used
 
+- Python
+- Tkinter
+- SpeechRecognition
+- Edge TTS
+- PyGame
+- psutil
+- PyAudio
 
-
-\* Voice command recognition
-
-\* Text-to-speech responses
-
-\* English and Hindi voice support
-
-\* Interactive desktop interface
-
-\* AC ON/OFF control
-
-\* Temperature control
-
-\* Voice-based interaction
-
-
-
-\## Technologies Used
-
-
-
-\* Python
-
-\* Tkinter
-
-\* SpeechRecognition
-
-\* Edge TTS
-
-\* PyGame
-
-\* NumPy
-
-\* SciPy
-
-\* PyAudio
-
-
-
-\## Installation
-
-
+## Installation
 
 Clone the repository:
 
-
-
 ```bash
-
 git clone https://github.com/piyudabbu123-a11y/NOVA---AC---Control.git
-
 cd NOVA---AC---Control
-
 ```
-
-
 
 Install the dependencies:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
-
-
-\## Run
-
-
+## Run
 
 ```bash
-
-python "Control AC/controlac.py"
-
+python nova.py
 ```
 
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 NOVA---AC---Control/
-
-├── Control AC/
-
-│   ├── ac.py
-
-│   ├── controlac.py
-
-│   ├── first.py
-
-│   ├── second.py
-
-│   ├── third.py
-
-│   ├── fourth.py
-
-│   ├── fifth.py
-
-│   ├── sixth.py
-
-│   └── test.py
-
-├── README.md
-
-├── requirements.txt
-
-└── .gitignore
-
+├── nova.py              # Main NOVA application
+├── ui.py                # Graphical user interface (GUI)
+├── README.md            # Project documentation
+├── requirements.txt     # Python dependencies
+└── .gitignore           # Git ignore configuration
 ```
 
+## Usage & Commands
 
-
-\## Future Improvements
-
-
-
-\* Wake-word detection
-
-\* IoT-based physical AC control
-
-\* Smart home integration
-
-\* Mobile application
-
-\* More natural conversational commands
-
-
-
+1. Launch `python nova.py`.
+2. Follow the spoken prompt to select your language by saying **"English"** or **"Hindi"**.
+3. Wake up NOVA by saying **"Nova"** or **"Hello Nova"**.
+4. Use commands such as:
+   - **Turn ON / OFF**: *"Turn on the AC"* / *"AC band karo"*
+   - **Set Temperature**: *"Change temperature to 21"* / *"Temperature 22 degree karo"*
+   - **Check Status**: *"Status"* / *"AC ka haal"*
+   - **Switch Language**: *"Change language"* / *"Bhasha badlo"*
